@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Amat Ortega</title>
+    <link rel="icon" type="image/png" href="images/foto1.png"> <!-- Favicon -->
+    <style>
+        @font-face {
+            font-family: 'Coolvetica Italic';
+            src: url('fonts/coolvetica-italic.woff2') format('woff2'),
+                 url('fonts/coolvetica-italic.woff') format('woff');
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Evita el scroll horizontal */
+            background-color: #fff; /* Fondo blanco */
+        }
+
+        header, footer {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .header-left, .footer-left {
+            margin-left: 20px;
+        }
+
+        .header-right, .footer-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right img, .footer-right img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center; /* Centra verticalmente el contenido del main */
+            padding: 20px;
+            color: #000; /* Cambiado a negro para mayor contraste */
+            justify-content: space-between; /* Espacia los elementos horizontalmente */
+            flex-direction: column; /* Cambia la dirección del contenido a columna */
+        }
+
+        .main-content {
+            display: flex;
+            align-items: center; /* Alinea los elementos verticalmente */
+            flex: 1;
+            justify-content: space-between; /* Espacia horizontalmente los elementos dentro del main-content */
+            width: 100%; /* Asegura que el main-content ocupe todo el ancho del main */
+            max-width: 1200px; /* Ajusta el ancho máximo del main-content */
+            margin-top: 20px; /* Añadido margen superior para evitar el contacto con el header */
+        }
+
+        .foto2 {
+            width: 450px; /* Ajusta el ancho de la imagen */
+            margin-left: 30px;
+            margin-top: 40px; /* Añadido margen superior para evitar contacto con el header */
+            height: auto; /* Mantiene la proporción de la imagen */
+            transition: transform 0.6s ease; /* Transición suave para la rotación */
+        }
+
+        .foto2:hover {
+            transform: rotate(-5deg) scale(1.05); /* Rota la imagen al pasar el ratón */
+            opacity: 1.2; /* Aumenta la opacidad para un efecto de resalte */
+        }
+
+        .text-container {
+            font-size: 40px; /* Tamaño del texto incrementado */
+            color: #000; /* Color del texto */
+            margin-left: 100px; /* Margen a la izquierda */
+            margin-right: 100px;
+            margin-top: 40px; /* Margen superior para separar del header */
+            text-align: center; /* Centra el texto */
+            flex: 1; /* Toma el espacio restante en el flex */
+            display: flex;
+            justify-content: flex-end; /* Alinea el texto a la derecha */
+        }
+
+        .polaroid-container {
+            display: flex; /* Cambiado a flex para colocar polaroids en una línea */
+            justify-content: center; /* Centra horizontalmente las polaroids */
+            margin-top: 100px; /* Espacio hacia arriba para obligar a hacer scroll */
+            margin-bottom: 50px;
+        }
+
+        .polaroid {
+            width: 150px; /* Ajusta el ancho de las fotos polaroid */
+            height: auto; /* Mantiene la proporción de la imagen */
+            transition: transform 0.4s ease; /* Añade una transición suave */
+            margin: 0 10px; /* Espacio entre polaroids */
+        }
+
+        /* Efecto de expansión al pasar el cursor */
+        .polaroid:hover {
+            transform: scale(1.2); /* Expande la imagen al 120% */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <p>𝙿𝚊𝚋𝚕𝚘 </p>
+        </div>
+        <div class="header-right">
+            <a href="https://www.instagram.com/son_pol1/" target="_blank">
+                <img src="images/insta.png" alt="Instagram Logo">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <img src="images/tiktok.png" alt="TikTok Logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <img src="images/foto2.jpg" alt="Foto 2" class="foto2">
+            <div class="text-container">𝙶𝚛𝚊𝚙𝚑𝚒𝚌 𝙰𝚛𝚝𝚜 𝙿𝚊𝚋𝚕𝚘 𝙰𝚖𝚊𝚝</div> <!-- Texto centrado a la derecha -->
+        </div>
+        <div class="polaroid-container">
+            <img src="images/polaroid1.png" alt="Polaroid 1" class="polaroid">
+            <img src="images/polaroid2.png" alt="Polaroid 2" class="polaroid">
+            <img src="images/polaroid3.png" alt="Polaroid 3" class="polaroid">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2024 Pablo Amat Ortega</p>
+        </div>
+        <div class="footer-right">
+        </div>
+    </footer>
+</body>
+</html>
